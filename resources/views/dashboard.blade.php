@@ -10,9 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <x-jet-welcome />
             </div>
+            
         </div>
-    </div>
-    <div>
-        <a href="{{ route('profile.show') }}">Ver nuestro perfil</a>
     </div>
 </x-app-layout>

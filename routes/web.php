@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Livewire\Mascota;
+use App\Http\Livewire\Mascotas;
+use Facade\Ignition\ErrorPage\Renderer;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +23,11 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+/* Route::get('/mascotas',[Mascota::class, 'render']); */
+
+Route::get('/mismascotas', function () {
+    return view('showpet');
+});
+
+Route::get('/mismascotas',Mascotas::class)->name('show.mascotas');
